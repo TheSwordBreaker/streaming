@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  redis:
+    image: "redis:alpine"
+  files:
+    container_name: files
+    build: ./files/
+    volumes:
+      - ./files/:/var/www/html/
+    ports:
+      - "8103:80"
+  user:
+    build:  ./user/
+    container_name: auth
+    volumes:
+      - ./user/:/var/www/html/
+    ports:
+      - "8101:80"
+  ui:
+    build:  ./ui/
+    container_name: php_web
+        
+    volumes:
+      - ./ui/:/var/www/html/
+    ports:
+      - "8100:80"
+
+  
+    
+    

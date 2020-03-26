@@ -1,0 +1,109 @@
+Plan 
+
++ database - user
+            username.
+            password.
+            email
+
+            type - admin ,user
+            
+operation 
+
+log in  - check user in redis database.    
+sign up  - create a user in redis database.
+remove user - delete user. 
+edit user - update database
+
+files  -  root dictory
+            file upload
+            file delete
+            file rename
+        +    view file
+
+        +    show all files
+
+            create dictory
+            remove dictory
+            rename a dictory
+            
+user -      admin -     root main  
+                        delete other users also.
+                        add user
+                        files
+            genral -    root username.  
+                        files
+
+
+ui -        log in form -homepage
+            sign up form/edit form -
+            notifcation - error sucess
+            control panel - genral
+                col-md-3 - for root files
+                col-md-9 - display board card for file and dir.
+                            with opition -  rename delete view - view in model.
+            control panel - admin
+                col-md-3 - for root files
+                            all users.
+
+                col-md-9 - display board card for file and dir.
+                            with opition -  rename delete 
+                            users with card delete , edit. 
+
+api 
+    user  - not ready.
+    auth  -ready
+    files - ready
+
+files :-
+    $user;
+    $token;
+    $op;
+    $path;
+    $extra;
+    $operation = ["upload","view","del","rename","dc","dr"];
+
+auth:-
+    $user;
+    $password;
+    $email;
+    $op;
+    $operation = ["verify","login","logout","signup","users","eu","ru"];
+
+user:-
+    $user;
+    $msg;
+    $status;
+    $op;
+    $extra ;
+    $operation = ["verify","login","logout","signup","users","eu","ru"];
+    $operation = ["upload","view","del","rename","dc","dr"];
+    js 
+        - callmodels with parameter
+        - sucess mesg 
+        - error mesg
+        - fetch data ;
+        - sidebar , main-panel , breadcrumb also
+            model . 
+    login - 
+    logout - 
+    redirects - php sessions.
+
+
+all :- 
+
+    $user;
+    $msg;
+    $status;
+    $op;
+
+    $path;
+    $extra;
+
+    $password;
+    $email;
+
+    $extra ;
+
+    $operation = ["ch","login","logout","signup","users","eu","ru"];
+    $operation = ["upload","view","del","rename","dc","dr"];
+
