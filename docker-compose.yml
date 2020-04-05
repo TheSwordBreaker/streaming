@@ -33,7 +33,7 @@ services:
     volumes:
       - ./ui/:/var/www/html/
     ports:
-      - "8100:80"
+      - "80:80"
     depends_on: 
       - user
       - files
