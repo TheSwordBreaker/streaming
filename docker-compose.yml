@@ -3,28 +3,40 @@ version: '3'
 services:
   redis:
     image: "redis:alpine"
+    container_name: Mredis
   files:
     container_name: files
     build: ./files/
+    image: kunalguptadev007/files
     volumes:
       - ./files/:/var/www/html/
     ports:
       - "8103:80"
+    depends_on: 
+      - user
   user:
     build:  ./user/
+    image: kunalguptadev007/auth
     container_name: auth
     volumes:
       - ./user/:/var/www/html/
     ports:
       - "8101:80"
+    depends_on: 
+      - redis
+    
   ui:
     build:  ./ui/
+    image: kunalguptadev007/ui
     container_name: php_web
         
     volumes:
       - ./ui/:/var/www/html/
     ports:
       - "8100:80"
+    depends_on: 
+      - user
+      - files
 
   
     

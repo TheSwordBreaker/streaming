@@ -280,7 +280,7 @@
 $(document).ready(function() {
     ui.verify()
     //1800
-    $(".preloader").fadeOut(100, function() {
+    $(".preloader").fadeOut(1800, function() {
         if (open === 0) {
             $("#content").show();
         } else {
