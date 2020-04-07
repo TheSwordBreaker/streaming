@@ -5,6 +5,8 @@ class BaseUi {
     id
     path
     operation
+    url = document.location.protocol + "//" + document.location.hostname;
+
 
     // UI - Methods
     showMainPanel() {}
@@ -37,14 +39,20 @@ class BaseUi {
 
 }
 
+var auth = document.location.protocol + "//" + document.location.hostname + ":8101/"
+var files = document.location.protocol + "//" + document.location.hostname + ":8103/"
 
 class ui extends BaseUi {
 
+
+
     constructor() {
+
+
 
         $(document).ready(function() {
             $.ajax({
-                url: "http://localhost:8101/",
+                url: auth,
                 method: "POST",
                 data: {
 
@@ -130,7 +138,7 @@ class ui extends BaseUi {
 
     static showSidePanel() {
         $.ajax({
-            url: "http://localhost:8103/",
+            url: files,
             method: "POST",
             data: {
                 "user": sessionStorage.getItem("username"),
@@ -175,7 +183,7 @@ class ui extends BaseUi {
 
 
         $.ajax({
-            url: "http://localhost:8103/",
+            url: files,
             method: "POST",
             data: {
                 "user": sessionStorage.getItem("username"),
@@ -247,7 +255,7 @@ class ui extends BaseUi {
 
         $.ajax({
 
-            url: "http://localhost:8103/",
+            url: files,
             method: "POST",
             data: {
                 "user": sessionStorage.getItem("username"),
@@ -288,7 +296,7 @@ class ui extends BaseUi {
 
         $.ajax({
             type: 'POST',
-            url: "http://localhost:8103/",
+            url: files,
             data: f,
             dataType: 'json',
             contentType: false,
@@ -316,7 +324,7 @@ class ui extends BaseUi {
     static deleteMe() {
         // alert(sessionStorage.getItem("path") + sessionStorage.getItem("filename"))
         $.ajax({
-            url: "http://localhost:8103/",
+            url: files,
             method: "POST",
             data: {
                 "user": sessionStorage.getItem("username"),
@@ -347,7 +355,7 @@ class ui extends BaseUi {
         var oldname = sessionStorage.getItem("path") + sessionStorage.getItem("filename");
         var newname = sessionStorage.getItem("path") + name;
         $.ajax({
-            url: "http://localhost:8103/",
+            url: files,
             method: "POST",
             data: {
                 "user": sessionStorage.getItem("username"),
@@ -389,7 +397,7 @@ class ui extends BaseUi {
         $("#inputFolder").val("")
         var path = sessionStorage.getItem("path") + folder;
         $.ajax({
-            url: "http://localhost:8103/",
+            url: files,
             method: "POST",
             data: {
                 "user": sessionStorage.getItem("username"),
@@ -416,7 +424,7 @@ class ui extends BaseUi {
     static deleteDictory() {
 
         $.ajax({
-            url: "http://localhost:8103/",
+            url: files,
             method: "POST",
             data: {
                 "user": sessionStorage.getItem("username"),
@@ -476,7 +484,7 @@ class ui extends BaseUi {
         var op = $("#op").val();
         // alert(user + password + op)
         $.ajax({
-            url: "http://localhost:8101/",
+            url: auth,
             method: "POST",
             data: {
                 "user": user,
@@ -505,7 +513,7 @@ class ui extends BaseUi {
 
     static logout() {
         $.ajax({
-            url: "http://localhost:8101/",
+            url: auth,
             method: "POST",
             data: {
 
@@ -537,7 +545,7 @@ class ui extends BaseUi {
 
 
         $.ajax({
-            url: "http://localhost:8101/",
+            url: auth,
             method: "POST",
             data: {
                 "user": user,
@@ -561,7 +569,7 @@ class ui extends BaseUi {
 
     static verify() {
         $.ajax({
-            url: "http://localhost:8101/",
+            url: auth,
             method: "POST",
             data: {
 

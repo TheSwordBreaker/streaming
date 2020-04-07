@@ -279,6 +279,10 @@
 <script>
 $(document).ready(function() {
     ui.verify()
+    // alert()
+    // alert(auth)
+    // alert(ui.files)
+    // alert(ui.url)
     //1800
     $(".preloader").fadeOut(1800, function() {
         if (open === 0) {
@@ -437,7 +441,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: 'POST',
-            url: "http://localhost:8103/",
+            url:files,
             data: f,
             dataType: 'json',
             contentType: false,

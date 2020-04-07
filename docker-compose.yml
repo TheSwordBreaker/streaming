@@ -2,7 +2,10 @@ version: '3'
 
 services:
   redis:
-    image: "redis:alpine"
+   
+    build: ./redis/
+    image: kunalguptadev007/red
+
     container_name: Mredis
   files:
     container_name: files
