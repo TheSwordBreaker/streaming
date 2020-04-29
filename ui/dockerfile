@@ -8,6 +8,7 @@ RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli \
     && sed -ri -e 's/^([ \t]*)(<\/VirtualHost>)/\1\tHeader set Access-Control-Allow-Origin "*"\n\1\2/g' /etc/apache2/sites-available/*.conf
 
 RUN a2enmod rewrite
+RUN service apache2 restart
 
 
 EXPOSE 80
