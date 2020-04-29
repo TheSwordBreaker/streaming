@@ -30,7 +30,9 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-                <a class="navbar-brand" href="index.php">Welcome Kunal Gupta</a>
+                <img src="img/server.png" alt="server" height="60px" width="80px" style="position:relative; left:0px; float:left; ">
+                <a class="navbar-brand" href="index.php">Cloud Storage </a> 
+                
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
