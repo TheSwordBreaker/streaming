@@ -1,5 +1,5 @@
-# sudo apt-get update
-# sudo apt-get remove docker docker-engine docker.io
+sudo apt-get update
+sudo apt-get remove docker docker-engine docker.io
 
 echo "Installing Docker"
 sudo apt install docker.io -y
