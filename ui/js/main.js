@@ -1,12 +1,14 @@
 class BaseUi {
 
+    url : document.location.protocol + "//" + document.location.hostname ,
+
     // token
     // username
 
     // id
     // path
     // operation
-    url = document.location.protocol + "//" + document.location.hostname;
+    
 
 
     // UI - Methods
