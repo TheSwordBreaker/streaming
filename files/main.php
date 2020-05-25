@@ -114,7 +114,7 @@
         $dname = $this->path."/".$p;
         
         if(!is_dir($dname)){
-            if( mkdir($dname)){
+            if( mkdir($dname,0770)){
                 return json_encode(array("status"=>0,"msg"=>"Done"));
             }else
             return json_encode(array("status"=>1,"msg"=>"server error"));
