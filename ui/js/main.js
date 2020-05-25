@@ -2,6 +2,7 @@ class BaseUi {
 
     token
     username
+    
     id
     path
     operation
