@@ -6,7 +6,7 @@ class BaseUi {
     // path
     // operation
     
-    url = document.location.protocol + "//" + document.location.hostname 
+    // url = document.location.protocol + "//" + document.location.hostname 
 
     // UI - Methods
     showMainPanel() {}
