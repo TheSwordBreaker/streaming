@@ -1,7 +1,4 @@
 class BaseUi {
-
-    url : document.location.protocol + "//" + document.location.hostname ,
-
     // token
     // username
 
@@ -9,7 +6,7 @@ class BaseUi {
     // path
     // operation
     
-
+    url = document.location.protocol + "//" + document.location.hostname 
 
     // UI - Methods
     showMainPanel() {}
